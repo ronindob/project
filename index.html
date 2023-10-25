@@ -1,12 +1,35 @@
-index.html
 <!DOCTYPE html>
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
-        <title>Page title</title>
+        <title>Lenni Art</title>
+        <link rel="stylesheet" href="styles.css?ver=0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossoring>
+        <link rel="preconnect" href="https://fronts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <h1>Заголовок страницы</h1>
-        <p title="Подсказка">Параграф текста
+    <body class="body">
+        <header class="page-header">
+            <a href="index.html" class="page-header__logo">Логотип</a>
+            <nav class="page-header__nav">
+                <a href="#"class="page-header__nav-link">Меропртиятия</a>
+                <a href="#"class="page-header__nav-link">Блог</a>
+                <a href="#"class="page-header__nav-link">О нас</a>
+                <a href="#"class="page-header__nav-link">Контакты</a>
+            </nav>
+            <a href="#" class="btn page-header__user-btn"></a>
+        </header>
+        <main class="main">
+            <div class="home">
+                <header class="main-header home__main-header"></header>
+                <section class="offers home__offers"></section>
+                <section class="about home__about"></section>
+                <section class="upcoming home__upcoming"></section>
+                <section class="listing home__listing"></section>
+                <section class="contacts home__contacts"></section>
+                <div class="doit home__doit"></div>
+            </div>
+        </main>
+        <footer class="page-footer"></footer>
     </body>
 </html>
