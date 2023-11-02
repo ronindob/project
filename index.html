@@ -3,25 +3,43 @@
     <head>
         <meta charset="UTF-8" />
         <title>Lenni Art</title>
-        <link rel="stylesheet" href="styles.css?ver=0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossoring>
-        <link rel="preconnect" href="https://fronts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" 
+        href="styles.css?ver=0">
+        <link rel="preconnect" 
+        href="https://fonts.googleapis.com">
+        <link rel="preconnect" 
+        href="https://fonts.gstatic.com" crossoring>
+        <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body class="body">
         <header class="page-header">
-            <a href="index.html" class="page-header__logo">Логотип</a>
+            <div class="page-header__container">
+                <a href="index.html" class="page-header__logo">
+                <img src="assets/images/logo.svg" 
+                class="page-header__logo-img"/>
+        </a>
             <nav class="page-header__nav">
                 <a href="#"class="page-header__nav-link">Меропртиятия</a>
                 <a href="#"class="page-header__nav-link">Блог</a>
                 <a href="#"class="page-header__nav-link">О нас</a>
                 <a href="#"class="page-header__nav-link">Контакты</a>
             </nav>
-            <a href="#" class="btn page-header__user-btn"></a>
+            <a href="#" class="btn page-header__user-btn">Войти</a>
+            </div>
+            
         </header>
-        <main class="main">
+        <main class="main"> 
             <div class="home">
-                <header class="main-header home__main-header"></header>
+                <header class="main-header home__main-header">
+                    <h1 class="main-header__title">Арт - пространство</h1>
+                    <picture class="main-header__picture">
+                        <img src="assets/images/LENNI.png" class="main-header__img"/>
+                    </picture>
+                    <p class="main-header__text">
+                        для людей, горящих сердец и делом
+                        место для настоящего
+                    </p>
+                </header>
                 <section class="offers home__offers"></section>
                 <section class="about home__about"></section>
                 <section class="upcoming home__upcoming"></section>
