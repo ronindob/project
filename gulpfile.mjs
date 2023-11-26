@@ -89,7 +89,7 @@ function js() {
             path.basepath += ".min";
         })
     )
-    .pipe(glup.dest("dist/scripts"));
+    .pipe(gulp.dest("dist/scripts"));
 }
 
 function jsCopy() {
