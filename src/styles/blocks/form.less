@@ -1,0 +1,54 @@
+.form {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        row-gap: 30px;
+        column-gap: 60px;
+        &--mb50 {
+            margin-bottom: 50px;
+        }
+    }
+    &__group {
+        width: calc(50% - 30px);
+    }
+    &__field {
+        display: block;
+        width: 100%;
+        &--w50 {
+            width: calc(50% - 30px);
+        }
+        &--mb30 {
+            margin-bottom: 30px;
+        }
+    }
+    &__btns {
+        display: flex;
+        align-items: center;
+    }
+    &__btn {
+        max-width: 400px;
+        width: 100%;
+    }
+    &__btnm {
+        box-sizing: border-box;
+        border: none;
+        margin: 0 auto;
+        text-decoration: underline;
+        background-color: transparent;
+        line-height: normal;
+        font-weight: 600;
+        font-size: 16px;
+        transition: background-color 0.2s;
+    &:hover {
+        @media (hover:hover) {
+            color: @red_dark;
+        }
+    }
+    }
+    &__check {
+        &--mb40 {
+            margin-bottom: 40px;
+        }
+    }
+}

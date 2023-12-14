@@ -1,0 +1,37 @@
+.card-event {
+    display: flex;
+    width: 405px;
+    max-width: 100%;
+    min-width: 280px;
+    color: @black;
+
+    &__link {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        &:active {
+            .event-card__title {
+                color: @red;
+                text-decoration-color: @red;
+            }
+        }
+    
+        &:hover .event-card__title {
+            @media (hover: hover) {
+                color: @red;
+            text-decoration-color: @red;
+            }
+        }
+    }
+
+    &__picture {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-bottom: 0 0 25px;
+        font-size: 0;
+        text-decoration: none;
+        overflow: hidden;
+    }
+}

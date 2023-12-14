@@ -102,22 +102,30 @@ max-width: 405px;
 width: calc(33.333% - 40px);
 }
 .card-event {
-    box-sizing: border-box;
+    display: flex;
+    width: 405px;
+    max-width: 100%;
+    min-width: 280px;
+    color: @black;
 }
 .card-event__link {
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    width: 100%;
 }
 .card-event__link:hover .card-event__title {
     color: #A51505;
     text-decoration-color: #A51505;
 }
 .card-event__picture {
-    position: relative;
     display: block;
-    margin-bottom: 25px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 0 0 25px;
+    font-size: 0;
+    text-decoration: none;
+    overflow: hidden;
 }
 .card-event__picture::before {
     content: '';
