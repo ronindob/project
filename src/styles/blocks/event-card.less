@@ -1,37 +1,74 @@
-.card-event {
+.event-card {
     display: flex;
     width: 405px;
     max-width: 100%;
     min-width: 280px;
-    color: @black;
 
     &__link {
-        text-decoration: none;
         display: flex;
         flex-direction: column;
         width: 100%;
-        &:active {
-            .event-card__title {
-                color: @red;
-                text-decoration-color: @red;
-            }
-        }
-    
-        &:hover .event-card__title {
-            @media (hover: hover) {
-                color: @red;
-            text-decoration-color: @red;
-            }
-        }
+        color: @black;
+        text-decoration: none;
+    }
+
+    &__link:hover &__title{
+        color: @red_dark;
+        text-decoration-color: @red_dark;
     }
 
     &__picture {
         display: block;
         position: relative;
         width: 100%;
-        margin-bottom: 0 0 25px;
+        margin: 0 0 25px;
         font-size: 0;
         text-decoration: none;
         overflow: hidden;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: 107.16%;
+        }
+    }
+
+
+
+    &__picture-img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        margin: 0 0 15px;
+        min-height: 66px;
+        color: @black;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+        text-decoration: underline transparent;
+        transition: color 0.2s, text-decoration-color 0.2s;
+    }
+
+    &__text {
+        margin: 0 0 auto;
+        font-size: 16px;
+        line-height: 22px;
+        //color: @black;
+    }
+
+    &__time {
+        margin: 15px 0 0;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+        //color: @black;
     }
 }
