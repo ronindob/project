@@ -1,52 +1,78 @@
-html,
-body {
+html,body {
     width: 100%;
     margin: 0;
     padding: 0;
 }
-
 .body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #dedede;
+    background-color: @gray;
     background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
     background-position: 0 0, 0 0;
     background-size: auto, 100% auto;
     background-repeat: repeat, repeat-y;
-    color: #1F1E1E;
-    font-family: "Open Sans", sans-serif;
+    color: @black;
+    font-family: @font_open_sans;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
     line-height: 1.375;
     overflow-x: hidden;
+
     padding-top: 147px;
+
+    @media @bw1660 {
+        padding-top: 111px;
+    }
+
+    @media @bw768 {
+        padding-top: 70px;
+    }
 }
 .main {
     flex: 1 0 auto;
 }
-
 .page-footer {
     flex: 0 0 auto;
 }
-
 a {
     color: @black;
     outline: none;
 }
-
-img  {
+img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
 }
-
-button {
-    box-shadow: none;
-    outline: none;
+input,
+textarea,
+select {
+    box-shadow: none; // убрать тень
+    outline: none; // убрать внешний контур, который подсвечивает текущий элемент в фокусе
     color: @black;
-    font-family: @font1;
+    font-family: @font_open_sans;
+}
+textarea {
+    resize: none; // запретить пользователю изменять размер
+}
+input,
+textarea {
+    &::placeholder {
+        color: #6C6C6C;
+    }
+}
+input:focus,
+textarea:focus {
+    &::placeholder {
+        color: transparent;
+    }
+}
+button {
     cursor: pointer;
+}
+figcaption {
+    color: @black_80;
+    font-size: @font_size_s;
 }

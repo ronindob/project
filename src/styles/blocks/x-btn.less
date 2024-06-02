@@ -1,0 +1,28 @@
+.x-btn {
+  display: flex;
+  outline: none;
+  border: 0;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: @black;
+  transition: background-color 0.2s;
+
+  @media @bw650 {
+    width: 36px;
+    height: 36px;
+  }
+
+  &:hover {
+    @media (hover: hover) {
+      background-color: @red_dark;
+    }
+  }
+
+  &__icon {
+    margin: auto;
+    color: @white;
+    pointer-events: none;
+  }
+}

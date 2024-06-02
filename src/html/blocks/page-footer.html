@@ -1,38 +1,87 @@
 <footer class="page-footer">
-    <div class="page-footer__container">
-        <div class="page-footer__border"></div>
-        <div class="page-footer__wrapper">
-            <nav class="page-footer__nav">
-                <a href="" class="page-footer__nav-link">Календарь мероприятий</a>
-                <a href="" class="page-footer__nav-link">Провести мероприятие</a>
-                <a href="" class="page-footer__nav-link">Стать арендатором</a>
-                <a href="" class="page-footer__nav-link">Наши проекты</a>
-                <a href="" class="page-footer__nav-link">Контакты</a>
-            </nav>
-            <form class="page-footer__form subscribe">
-                <h4 class="subscribe__title">
-                    Подпишись и будь в курсе происходящего
-                </h4>
-                <div class="subscribe__wrapper">
-                    <input type="email" 
-                    name="email" 
-                    placeholder="Email" 
-                    class="subscribe__input" 
-                    required/>
-                    <button type="submit" class="subscribe__submit">Подписаться</button>
-                </div>
-                <label class="subscribe__check check">
-                    <input type="checkbox" 
-                    class="check__input" 
-                    name="agree" 
-                    required />
-                    <span class="check__mark"></span>
-                    <span class="check__label">
-                        Подписаться
-                        Согласен на обработку персональных данных
-                    </span>
-                </label>
-            </form>
+  <div class="page-footer__container">
+    <div class="page-footer__separator"></div>
+
+    <div class="page-footer__nav-subcribe-container">
+      <nav class="page-footer__nav">
+        <a href="#" class="page-footer__nav-link">Календарь мероприятий</a>
+        <a href="#" class="page-footer__nav-link">Провести мероприятие</a>
+        <a href="#" class="page-footer__nav-link">Стать арендатором</a>
+        <a href="#" class="page-footer__nav-link">Наши проекты</a>
+        <a href="#" class="page-footer__nav-link">Контакты</a>
+      </nav>
+
+      <form
+        action="https://jsonplaceholder.typicode.com/posts"
+        class="page-footer__subscribe-form subscribe-form"
+        id="js-subscribeForm"
+      >
+        <div class="subscribe-form__field">
+          <span class="subscribe-form__field-label"
+            >Подпишись и будь в курсе происходящего</span
+          >
+
+          <div class="subscribe-form__wrapper">
+            <input
+              id="js-subscribeEmail"
+              class="subscribe-form__field-input"
+              type="email"
+              placeholder="Email"
+              name="email"
+              required
+            />
+
+            <button class="subscribe-form__send-btn" type="submit" name="send">
+              Подписаться
+            </button>
+          </div>
         </div>
+
+        <label class="check check--pt0 subscribe-form__check">
+          <input
+            class="check__input"
+            type="checkbox"
+            name="agree"
+            required
+            checked
+          />
+
+          <span class="check__mark"></span>
+          <span class="check__label check__label--s">
+            Согласен на обработку персональных данных
+          </span>
+        </label>
+      </form>
     </div>
+
+    <div class="page-footer__vault">
+      <div class="page-footer__policy">
+        <a href="#" class="link page-footer__millennials">© Millennials 2022</a>
+        <a href="#" class="link page-footer__confident"
+          >Политика конфиденциальности</a
+        >
+        <a href="#" class="link page-footer__cookies">Cookies</a>
+      </div>
+      <div class="page-footer__social">
+        <a href="#" class="page-footer__inst-link">
+          <svg class="page-footer__social-icon" width="58" height="58">
+            <use xlink:href="assets/icons/symbols.svg#social_inst"></use>
+          </svg>
+        </a>
+        <a href="#" class="page-footer__inst-link">
+          <svg class="page-footer__social-icon" width="58" height="58">
+            <use xlink:href="assets/icons/symbols.svg#social_vk"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="page-footer__tagree">
+        <a href="#" class="link page-footer__tagree-label"
+          >Создание и продвижение
+          <svg class="page-footer__tagree-icon" width="56" height="17">
+            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
 </footer>

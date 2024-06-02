@@ -1,29 +1,83 @@
 .container() {
-box-sizing: border-box;
-width: 100%;
-max-width: 1414px;
-margin-left: auto;
-margin-right: auto;
-padding-left: 40px;
-padding-right: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1414px;
+    /* ширина блока контента + паддинги с двух сторон*/
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    @media @bw1340 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media @bw768 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .width_624 {
     box-sizing: border-box;
     width: 100%;
     max-width: 624px;
+
+    @media @bw1660 {
+        max-width: 604px;
+    }
+
+    @media @bw1340 {
+        max-width: 566px;
+    }
 }
 
-.is-hidden {
+.is-hidden() {
     position: absolute !important;
     width: 0 !important;
     height: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
     border: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none;
-    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(100%) !important;
     white-space: nowrap !important;
+    overflow: hidden !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
 
+.show-event-popup {
+    body {
+        overflow: hidden;
+    }
+
+    #js-eventPP {
+        display: flex;
+    }
+}
+
+.show-nav {
+    body {
+        @media @bw1020 {
+            overflow: hidden;
+        }
+    }
+
+    .page-header__nav {
+        @media @bw1020 {
+            transform: translateX(0);
+        }
+    }
+
+    .page-header__nav-toggle {
+        &::before {
+            transform: translate(0px, 6px) rotate(45deg);
+            box-shadow: none;
+        }
+        &::after {
+            transform: translate(0px, -6px) rotate(-46deg);
+        }
+    }
 }

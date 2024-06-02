@@ -1,41 +1,94 @@
 .contacts-item {
     display: flex;
+    align-items: center;
     gap: 54px;
+
+    @media @bw1020 {
+        flex-direction: column;
+        min-width: 194.17px;
+        margin: 0 auto;
+        gap: 30px;
+    }
+
+    @media @bw650 {
+        flex-direction: row;
+        min-width: none;
+        margin: 0 0 44px 0;
+    }
+
+    &:last-child {
+        @media @bw650 {
+            margin-bottom: 0;
+        }
+    }
+
     &__img {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 110px;
+        min-width: 110px;
         height: 110px;
         background-color: @black;
-        color: @red;
+
+        @media @bw650 {
+            min-width: 65px;
+            height: 65px;
+        }
     }
+
     &__title {
         margin: 0 0 10px;
         font-weight: 600;
         font-size: 20px;
         line-height: normal;
         color: @black;
+
+        @media @bw1020 {
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        @media @bw650 {
+            font-size: 14px;
+            font-weight: 600;
+            text-align: left;
+        }
     }
+
     &__info {
-        margin: 0 0 5px;
         display: block;
+        margin: 0;
+        margin: 0 0 5px;
         font-weight: 400;
         font-size: 16px;
-        line-height: normal;
-        color: @black;
+
+        @media @bw1020 {
+            text-align: center;
+        }
+
+        @media @bw650 {
+            margin: 0;
+            font-size: 14px;
+            text-align: left;
+        }
+
         &[href] {
+            transition: color 0.2s;
             text-decoration: none;
-            transition:  color 0.2s;
+
+
             &:hover {
-                @media (hover:hover) {
-                   color: @red; 
+                @media(hover:hover) {
+                    color: @red;
                 }
             }
+
             &:active {
                 color: @red;
             }
         }
+
         &:last-child {
             margin-bottom: 0;
         }

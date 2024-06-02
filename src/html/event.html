@@ -1,118 +1,350 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Lenni Art</title>
-        <link rel="stylesheet" 
-        href="styles/styles.css?ver=0">
-        <link rel="preconnect" 
-        href="https://fonts.googleapis.com">
-        <link rel="preconnect" 
-        href="https://fonts.gstatic.com" crossoring>
-        <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body class="body">
-        <header class="page-header">
-            <div class="page-header__container">
-                <a href="index.html" class="page-header__logo">
-                <!-- <img src="assets/images/logo.svg" 
-                class="page-header__logo-img"/> -->
-                <svg class="page-header__logo-img" width="202" height="147">
-                    <use xlink:href="assets/icons/symbols.svg#logo"></use>
-                </svg>
-        </a>
-            <nav class="page-header__nav">
-                <a href="#"class="page-header__nav-link">Меропртиятия</a>
-                <a href="#"class="page-header__nav-link">Блог</a>
-                <a href="#"class="page-header__nav-link">О нас</a>
-                <a href="#"class="page-header__nav-link">Контакты</a>
-            </nav>
-            <a href="#" class="btn page-header__user-btn">Войти</a>
+  @@include('blocks/head.html')
+
+  <body class="body">
+    @@include('blocks/page-header.html')
+
+    <main class="main">
+      @@include('blocks/breadcrumbs.html')
+
+      <article class="event">
+        <div class="event__container">
+          <h1 class="event__title">Вечер | The Best of Sade</h1>
+          <div class="event__wrapper">
+            <p class="event__info-left event__info-left--ta-right">
+              <span class="event__date-time-info">16/12/2022</span>
+              <br />Кафе «Птичка»
+            </p>
+            <picture class="event__picture">
+              <source
+                media="(max-width: 1019px)"
+                type="image/webp"
+                srcset="assets/images/events/sade_tablet.webp"
+              />
+              <source
+                media="(max-width: 1019px)"
+                srcset="assets/images/events/sade_tablet.jpg"
+              />
+
+              <source
+                type="image/webp"
+                srcset="assets/images/events/sade.webp"
+              />
+
+              <img
+                src="assets/images/events/sade.jpg"
+                class="event__img"
+                alt="sade"
+              />
+            </picture>
+            <p class="event__info-right">
+              <span class="event__date-time-info">20.00</span>
+              начало<br />
+              Ленина 10 | 2 этаж
+            </p>
+          </div>
+
+          <div class="content event__content">
+            <h5>Программа мероприятия:</h5>
+            <ul>
+              <li>20:15 — Приветствие гостей</li>
+              <li>20:30 — Первая подача блюд | Салаты</li>
+              <li>20:40 — Живой вокал | Композиции 1-3</li>
+              <li>21:20 — Подача горячих блюд</li>
+              <li>21:30 — Живой вокал | Композиции 4-7</li>
+              <li>22:15 — Подача десерта</li>
+              <li>22:30 — Живой вокал | Композиции 8-9</li>
+              <li>23:00 — Завершение вечера</li>
+            </ul>
+            <br />
+            <h5>The Best Of Sade</h5>
+            <p>
+              Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит
+              9 треков, включая самые популярные хиты группы, раритеты и их
+              любимые треки.
+            </p>
+            <p>
+              Группа продемонстрировала необычайное долголетие и креативность
+              своей творческой карьеры. Она лидировала музыкальных чартах с 1994
+              по 1995 год, став четырехкратно платиновой в США и продав более 2
+              миллионов копий в Европе.
+            </p>
+            <br />
+            <ol>
+              <li>Your Love Is King</li>
+              <li>Hang On To Your Love</li>
+              <li>Smooth Operator</li>
+              <li>Jezebel</li>
+              <li>The Sweetest Taboo</li>
+              <li>Is It A Crime</li>
+              <li>Never As Good As The First Time</li>
+              <li>Love Is Stronger Than Pride</li>
+              <li>Paradise</li>
+            </ol>
+          </div>
+
+          <form class="reserve event__reserve" id="js-reserve-form">
+            <div class="reserve__cheaks">
+              <h4 class="reserve__section-title reserve__section-title--mb30">
+                Забронировать столик
+              </h4>
+
+              <label class="reserve__check check check--red">
+                <input
+                  class="check__input js-reserve"
+                  type="checkbox"
+                  name="table_1"
+                />
+                <span class="check__mark"></span>
+                <span class="check__label">1 стол</span>
+              </label>
+              <label class="reserve__check check">
+                <input
+                  class="check__input js-reserve"
+                  type="checkbox"
+                  name="table_2"
+                />
+                <span class="check__mark"></span>
+                <span class="check__label">2 стол</span>
+              </label>
+              <label class="reserve__check check">
+                <input
+                  class="check__input js-reserve"
+                  type="checkbox"
+                  name="table_3"
+                />
+                <span class="check__mark"></span>
+                <span class="check__label">3 стол</span>
+              </label>
+              <label class="reserve__check check check--red">
+                <input
+                  class="check__input js-reserve"
+                  type="checkbox"
+                  name="table_4"
+                />
+                <span class="check__mark"></span>
+                <span class="check__label">4 стол</span>
+              </label>
+              <label class="reserve__check check check--disabled">
+                <input
+                  class="check__input js-reserve"
+                  type="checkbox"
+                  name="table_5"
+                  disabled
+                />
+                <span class="check__mark"></span>
+                <span class="check__label">5 стол</span>
+              </label>
+              <label class="reserve__check check">
+                <input
+                  class="check__input js-reserve"
+                  type="checkbox"
+                  name="table_6"
+                />
+                <span class="check__mark"></span>
+                <span class="check__label">6 стол</span>
+              </label>
+              <label class="reserve__check check check--red">
+                <input
+                  class="check__input js-reserve"
+                  type="checkbox"
+                  name="table_7"
+                />
+                <span class="check__mark"></span>
+                <span class="check__label">7 стол</span>
+              </label>
+              <label class="reserve__check check check--red">
+                <input
+                  class="check__input js-reserve"
+                  type="checkbox"
+                  name="table_8"
+                />
+                <span class="check__mark"></span>
+                <span class="check__label">8 стол</span>
+              </label>
+              <label class="reserve__check check check--red">
+                <input
+                  class="check__input js-reserve"
+                  type="checkbox"
+                  name="table_9"
+                />
+                <span class="check__mark"></span>
+                <span class="check__label">9 стол</span>
+              </label>
+              <label class="reserve__check check">
+                <input
+                  class="check__input js-reserve"
+                  type="checkbox"
+                  name="table_10"
+                />
+                <span class="check__mark"></span>
+                <span class="check__label">10 стол</span>
+              </label>
+              <label class="reserve__check check">
+                <input
+                  class="check__input js-reserve"
+                  type="checkbox"
+                  name="table_11"
+                />
+                <span class="check__mark"></span>
+                <span class="check__label">11 стол</span>
+              </label>
             </div>
-            
-        </header>
-        
-        <main class="main">
-            <!-- Здесь будут хлебные крошки -->
-            <article class="event">
-              <!-- Здесь пропущенное содержимое страницы -->
-              <form class="reserve event__reserve">
-                <div class="reserve__checks">
-                  Чекбоксы
+
+            <div class="reserve__scheme">
+              <div class="reserve__scheme-container">
+                <h4 class="reserve__scheme-title">Сцена</h4>
+
+                <div class="reserve__scheme-wrapper">
+                  @@include('blocks/scene.html')
                 </div>
-                <div class="reserve__scheme">
-                  Схема столов
-                </div>
-                <div class="reserve__order">
-                  Оформление заказа
-                </div>
-                <div class="reserve__legend">
-                  Легенда
-                </div>
-              </form>
-            </article>
-          </main>
-        
-        <footer class="page-footer"></footer>
-    </body>
-=======
-<!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Lenni Art</title>
-        <link rel="stylesheet" 
-        href="styles/styles.css?ver=0">
-        <link rel="preconnect" 
-        href="https://fonts.googleapis.com">
-        <link rel="preconnect" 
-        href="https://fonts.gstatic.com" crossoring>
-        <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body class="body">
-        <header class="page-header">
-            <div class="page-header__container">
-                <a href="index.html" class="page-header__logo">
-                <!-- <img src="assets/images/logo.svg" 
-                class="page-header__logo-img"/> -->
-                <svg class="page-header__logo-img" width="202" height="147">
-                    <use xlink:href="assets/icons/symbols.svg#logo"></use>
-                </svg>
-        </a>
-            <nav class="page-header__nav">
-                <a href="#"class="page-header__nav-link">Меропртиятия</a>
-                <a href="#"class="page-header__nav-link">Блог</a>
-                <a href="#"class="page-header__nav-link">О нас</a>
-                <a href="#"class="page-header__nav-link">Контакты</a>
-            </nav>
-            <a href="#" class="btn page-header__user-btn">Войти</a>
+              </div>
             </div>
-            
-        </header>
-        
-        <main class="main">
-            <!-- Здесь будут хлебные крошки -->
-            <article class="event">
-              <!-- Здесь пропущенное содержимое страницы -->
-              <form class="reserve event__reserve">
-                <div class="reserve__checks">
-                  Чекбоксы
+
+            <div class="reserve__order">
+              <h4 class="reserve__section-title">
+                Ваши пригласительные билеты
+              </h4>
+
+              <div class="reserve__tickets-list">
+                <div class="reserve__tickets">
+                  <div
+                    id="js-red-table-count"
+                    class="reserve__qty"
+                    data-caption="шт."
+                    data-price="1400"
+                    data-currency="₽"
+                  >
+                    0
+                  </div>
+                  <div
+                    id="js-red-table-sum"
+                    class="reserve__sum"
+                    data-currency="₽"
+                  >
+                    0
+                  </div>
                 </div>
-                <div class="reserve__scheme">
-                  Схема столов
+
+                <div class="reserve__tickets">
+                  <div
+                    id="js-black-table-count"
+                    class="reserve__qty"
+                    data-caption="шт."
+                    data-price="1250"
+                    data-currency="₽"
+                  >
+                    0
+                  </div>
+                  <div
+                    id="js-black-table-sum"
+                    class="reserve__sum"
+                    data-currency="₽"
+                  >
+                    0
+                  </div>
                 </div>
-                <div class="reserve__order">
-                  Оформление заказа
+              </div>
+
+              <div
+                id="js-total-sum"
+                class="reserve__total"
+                data-caption="Сумма"
+                data-currency="₽"
+              >
+                0
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn--red reserve__submit"
+                id="js-submit"
+              >
+                Купить билеты
+              </button>
+            </div>
+
+            <div class="reserve__legend">
+              <div class="reserve__price">
+                <h4 class="reserve__section-title">
+                  Стоимость пригласительного билета
+                </h4>
+
+                <div class="reserve__price-list">
+                  <div
+                    class="reserve__price-item reserve__price-item--red"
+                    data-caption="₽ | 1 персона"
+                  >
+                    1400
+                  </div>
+                  <div class="reserve__price-item" data-caption="₽ | 1 персона">
+                    1200
+                  </div>
                 </div>
-                <div class="reserve__legend">
-                  Легенда
+              </div>
+
+              <div class="reserve__note">
+                <h4 class="reserve__section-title reserve__section-title--note">
+                  Примечание
+                </h4>
+
+                <div class="reserve__note-listing">
+                  <div class="reserve__note-elem">
+                    <div class="reserve__note-mark">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="11.5"
+                          fill="#BFBFBF"
+                          stroke="#BFBFBF"
+                        />
+                      </svg>
+                    </div>
+                    <div class="reserve__note-label">забронировано</div>
+                  </div>
+                  <div class="reserve__note-elem">
+                    <div class="reserve__note-mark">
+                      <svg
+                        class="red"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="12" cy="12" r="11.5" stroke="#BC3324" />
+                      </svg>
+                      <svg
+                        class="black"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="12" cy="12" r="11.5" stroke="#1F1E1E" />
+                      </svg>
+                    </div>
+                    <div class="reserve__note-label">доступные места</div>
+                  </div>
                 </div>
-              </form>
-            </article>
-          </main>
-        
-        <footer class="page-footer"></footer>
-    </body>
->>>>>>> 53a6f7309998e98a60c3f88111de59f3afa01581
+              </div>
+            </div>
+          </form>
+        </div>
+      </article>
+    </main>
+
+    @@include('blocks/page-footer.html') @@include('blocks/event-pp.html')
+
+    <script src="scripts/event.js"></script>
+  </body>
 </html>

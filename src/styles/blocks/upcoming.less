@@ -1,0 +1,156 @@
+.upcoming {
+    padding: 90px 0 55px 0;
+    background-color: @white_60;
+
+    @media @bw1660 {
+        padding: 70px 0 47px 0;
+    }
+
+    @media @bw1020 {
+        padding: 50px 0 13px 0;
+    }
+
+    @media @bw768 {
+        padding: 30px 0 29px 0;
+    }
+
+    &__container {
+        .container();
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__top-border {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: -120px;
+            display: block;
+            width: 0;
+            height: 0;
+
+            @media @bw1660 {
+                top: -100px;
+            }
+            @media @bw1020 {
+                top: -80px;
+            }
+            @media @bw768 {
+                top: -40px;
+                border-bottom: 10px solid @white_60;
+            }
+        }
+
+        &::before {
+            border-bottom: 30px solid @white_60;
+            border-right: 33.3333vw solid transparent;
+        }
+
+        &::after {
+            right: 0;
+            border-bottom: 30px solid @white_60;
+            border-left: 66.6666vw solid transparent;
+
+        }
+    }
+
+    &__bottom-border {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 55px;
+            display: block;
+            width: 0;
+            height: 0;
+
+            @media @bw1660 {
+                top: 47px;
+            }
+            @media @bw1020 {
+                top: 13px;
+            }
+            @media @bw768 {
+                top: 29px;
+                border-top: 10px solid @white_60;
+            }
+        }
+
+        &::before {
+            border-top: 30px solid @white_60;
+            border-right: 66.6666vw solid transparent;
+        }
+
+        &::after {
+            right: 0;
+            border-top: 30px solid @white_60;
+            border-left: 33.3333vw solid transparent;
+        }
+    }
+
+    &__listing {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        margin-bottom: 70px;
+
+        @media @bw1340 {
+            padding: 0;
+        }
+
+        @media @bw768 {
+            padding: 0;
+        }
+    }
+
+    &__blocks {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 525px;
+        width: 100%;
+
+        @media @bw1020 {
+            max-width: 300px;
+        }
+    }
+
+    &__slider-blocks {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100px;
+        width: 100%;
+
+        @media @bw1020 {
+            max-width: 60.5px;
+        }
+    }
+
+    &__slider-block {
+        height: 2px;
+        width: 15px;
+        border-radius: 2px;
+        background-color: @gray_dark;
+
+        @media @bw1020 {
+            width: 9px;
+        }
+
+        &--black {
+            background-color: @black;
+        }
+    }
+
+    &__link {
+        align-self: flex-end;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}

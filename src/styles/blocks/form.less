@@ -1,54 +1,102 @@
 .form {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
     &__list {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
-        row-gap: 30px;
-        column-gap: 60px;
-        &--mb50 {
-            margin-bottom: 50px;
+        justify-content: space-between;
+
+        @media @bw768 {
+            flex-direction: column;
         }
     }
+
+    &__field,
     &__group {
-        width: calc(50% - 30px);
-    }
-    &__field {
-        display: block;
         width: 100%;
+
+        @media @bw768 {
+            width: 100%;
+        }
+
         &--w50 {
             width: calc(50% - 30px);
         }
-        &--mb30 {
-            margin-bottom: 30px;
+    }
+
+    &__field {
+        margin: 0 0 30px;
+    }
+
+    &__section {
+        margin: 0 0 20px;
+    }
+
+    &__section-title {
+        margin: 0 0 10px;
+        color: @black;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        &--mb7 {
+            margin-bottom: 7px;
         }
     }
+
+    &__check-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0 30px;
+    }
+
+
+
+    &__check {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     &__btns {
         display: flex;
         align-items: center;
-    }
-    &__btn {
-        max-width: 400px;
-        width: 100%;
-    }
-    &__btnm {
-        box-sizing: border-box;
-        border: none;
-        margin: 0 auto;
-        text-decoration: underline;
-        background-color: transparent;
-        line-height: normal;
-        font-weight: 600;
-        font-size: 16px;
-        transition: background-color 0.2s;
-    &:hover {
-        @media (hover:hover) {
-            color: @red_dark;
+
+        @media @bw768 {
+            flex-direction: column;
         }
     }
+
+    &__submit {
+        @media @bw768 {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        &--w50 {
+            width: calc(50% - 30px);
+        }
     }
-    &__check {
-        &--mb40 {
-            margin-bottom: 40px;
+
+    &__close {
+        margin: 0 auto;
+        padding: 4px 0;
+        border: none;
+        background: transparent;
+        color: @black;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration: underline;
+        transition: color 0.2s;
+
+        &:hover {
+            @media(hover:hover) {
+                color: @red;
+            }
         }
     }
 }

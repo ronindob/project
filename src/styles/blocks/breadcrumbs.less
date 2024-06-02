@@ -1,0 +1,47 @@
+.breadcrumbs {
+    .container();
+    margin-top: 40px;
+
+    @media @bw768 {
+        display: none;
+    }
+
+    &__link {
+        display: inline;
+        margin-right: 10px;
+        color: @black;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        @media @bw1340 {
+            font-size: 14px;
+        }
+
+        &::after {
+            content: "/";
+            position: relative;
+            left: 4px;
+            display: inline-block;
+            width: 0; // чтобы не было pointer при наведении
+            pointer-events: none;
+        }
+
+
+        &:hover {
+            @media(hover:hover) {
+                color: @red;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

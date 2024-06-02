@@ -1,6 +1,5 @@
 .listing {
-    .container;
-
+    .container();
     display: flex;
     flex-direction: column;
 
@@ -8,10 +7,124 @@
         display: flex;
         flex-wrap: wrap;
         margin: 0 -30px -120px;
+
+        @media @bw1660 {
+            margin: 0 -20px -100px;
+        }
+
+        @media @bw1340 {
+            margin: 0 -15px -100px;
+        }
+
+        @media @bw1020 {
+            justify-content: center;
+            margin: 0 -15px -80px;
+        }
+
+        @media @bw768 {
+            margin: 0 -10px -80px;
+        }
+
+        @media @bw650 {
+            margin: 0 0 -60px;
+        }
     }
 
-    &__event-card {
+    &__card-event {
+        max-width: 405px;
         width: calc(33.333% - 60px);
         margin: 0 30px 120px;
+
+        @media @bw1660 {
+            width: calc(33.3333% - 40px);
+            margin: 0 20px 100px;
+        }
+
+        @media @bw1340 {
+            width: calc(33.3333% - 30px);
+            margin: 0 15px 100px;
+        }
+
+        @media @bw1020 {
+            width: calc(50% - 30px);
+            max-width: 405px;
+            margin: 0 15px 80px;
+        }
+
+        @media @bw768 {
+            margin: 0 10px 80px;
+        }
+
+        @media @bw650 {
+            width: 100%;
+            margin: 0 0 60px;
+        }
+
+        &--main {
+            margin: 0 60px 0 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+    }
+
+    &__link {
+        align-self: end;
+        padding: 15px 0px 15px 40px;
+        margin-top: 70px;
+
+        @media @bw1660 {
+            margin-top: 60px;
+        }
+
+        @media @bw1020 {
+            margin-top: 40px;
+        }
+
+        @media @bw600 {
+            margin-top: 50px;
+            font-size: 14px;
+        }
+    }
+
+    &__article-card {
+        margin-top: 120px;
+
+        @media @bw1020 {
+            margin-top: 80px;
+        }
+
+        @media @bw600 {
+            margin-top: 120px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            margin: 0 auto 60px;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-width: 1254px;
+            height: 1px;
+            background-color: @black;
+            pointer-events: none;
+
+            @media @bw1020 {
+                margin: 0 auto 50px;
+            }
+        }
+
+        &:first-child {
+            margin-top: 0;
+
+            &::before {
+                display: none;
+            }
+        }
     }
 }

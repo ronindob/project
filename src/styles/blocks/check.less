@@ -1,19 +1,32 @@
 .check {
     box-sizing: border-box;
     position: relative;
-    padding-left: 40px;
-    display: block;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 24px;
+    padding-top: 2px;
+    padding-left: 24px;
+    color: @black;
+    cursor: pointer;
+
+    &--pt0 {
+        padding-top: 0;
+    }
+
     &__input {
-        .is-hidden;
+        .is-hidden();
+
         &:checked {
-            &~.check__mark {
+            &~.check__mark { // вот эта мешанина в начале означает "следующий элемент"
                 background-color: @black;
+
                 &::after {
-                    content: '';
+                    content: "";
                     display: block;
                     position: absolute;
-                    top: 2px;
                     left: 7px;
+                    top: 2px;
                     width: 6px;
                     height: 12px;
                     border-bottom: 2px solid @white;
@@ -23,19 +36,55 @@
             }
         }
     }
+
     &__mark {
+        box-sizing: border-box;
+        display: block;
         position: absolute;
-        top: 0;
         left: 0;
+        top: 0;
         width: 24px;
         height: 24px;
-        box-sizing: border-box;
         border: 1px solid @black;
-        background-color: transparent;
-        transition: background-color 0.2s;
     }
+
     &__label {
-        font-size: 14px;
-        color: @black;
+        margin-left: 15px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+
+        @media @bw768 {
+            font-size: 14px;
+        }
+
+        &--s {
+            font-size: 14px;
+            line-height: 19px;
+
+            @media @bw600 {
+                font-size: 12px;
+                line-height: 13px;
+            }
+        }
+    }
+
+    &--red {
+        color: @red;
+        .check__mark {
+            border-color: @red;
+        }
+        .check__input {
+            &:checked {
+                &~.check__mark {
+                    background-color: @red;
+                }
+            }
+        }
+    }
+
+    &--disabled {
+        pointer-events: none;
+        opacity: 0.5;
     }
 }

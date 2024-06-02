@@ -1,0 +1,63 @@
+<!--Разметка однострочных полей-->
+<label class="field">
+  <span class="field__label">Имя*</span>
+
+  <input
+    class="field__input"
+    type="text"
+    placeholder="Имя"
+    name="name"
+    required
+  />
+</label>
+
+<!--Разметка многострочных полей-->
+<label class="field">
+  <span class="field__title">Есть пожелания? Напишите нам:</span>
+
+  <textarea class="field__textarea" name="Пожелания" required></textarea>
+</label>
+
+<!--Разметка Select-а -->
+<label class="field">
+  <span class="field__title">Планируемое количество посетителей:</span>
+
+  <select class="field__select" name="amount">
+    <option value="20">до 20 человек</option>
+    <option value="100">от 20 до 100 человек</option>
+    <option value="500">от 100 до 500 человек</option>
+    <option value="1000">более 500 человек</option>
+  </select>
+</label>
+
+<!--Разметка радио-кнопок-->
+<div class="radio">
+  <label class="radio__item">
+    <input
+      class="radio__input"
+      type="radio"
+      name="format"
+      value="seminar"
+      checked
+    />
+    <span class="radio__mark"></span>
+    <span class="radio__label">Мастер-класс/семинар</span>
+  </label>
+
+  <label class="radio__item">
+    <input class="radio__input" type="radio" name="format" value="concert" />
+    <span class="radio__mark"></span>
+    <span class="radio__label">Концерт/выступление</span>
+  </label>
+</div>
+
+<!--Разметка чекбоксов-->
+<label class="check">
+  <input class="check__input" type="checkbox" name="agree" required checked />
+
+  <span class="check__mark"></span>
+  <span class="check__label check__label--s">
+    Я соглашаюсь с пользовательским соглашением и с политикой использования
+    персональных данных
+  </span>
+</label>

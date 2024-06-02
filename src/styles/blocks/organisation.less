@@ -1,0 +1,52 @@
+.organisation {
+    &__container {
+        .container();
+    }
+    &__wrapper {
+        display: flex;
+
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+
+        @media @bw1020 {
+            flex-wrap: wrap;
+        }
+    }
+    &__item {
+        margin: 0 auto;
+        @media @bw1020 {
+            margin-bottom: 50px;
+        }
+        @media @bw650 {
+            margin-bottom: 40px;
+        }
+        &:last-child {
+            @media @bw1020 {
+                margin: 0 auto;
+            }
+            @media @bw650 {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__picture {
+        position: relative;
+        display: block;
+        width: 752px;
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 65.558%;
+        }
+    }
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

@@ -1,6 +1,50 @@
 .events {
-    padding-top: 140px 0 100px;
+    padding-top: 140px;
+
+    @media @bw1020 {
+        padding-top: 90px;
+    }
+
+    @media @bw768 {
+        padding-top: 80px;
+    }
+
     &__listing {
         margin-bottom: 100px;
+    }
+
+    &__link {
+        margin: 70px auto 0;
+
+        @media @bw1660 {
+            margin-top: 60px;
+        }
+        @media @bw768 {
+            margin-top: 50px;
+        }
+    }
+
+    &__tariff {
+        margin-bottom: 50px;
+
+        @media @bw1660 {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__offers {
+        margin-bottom: 100px;
+
+        @media @bw768 {
+            margin-bottom: 90px;
+        }
+    }
+
+    &__organisation {
+        margin-bottom: 150px;
+
+        @media @bw1020 {
+            margin-bottom: 100px;
+        }
     }
 }

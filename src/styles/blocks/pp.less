@@ -1,78 +1,115 @@
 .pp {
-   display: none;
- position: fixed;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- box-sizing: border-box;
- padding: 90px 50px 50px;
- overflow-y: auto;
- z-index: 110;
- background-color: @gray;
- //display: none;
- @supports (backdrop-filter: blur(25px)) {
-    background-color: @black_40;
-    backdrop-filter: blur(25px);
- }
- &__container {
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    max-width: 1210px;
-    width: 100%;
-    margin: auto;
-    padding: 70px 40px 40px;
-    background-color: @gray;
-    background-image: url(../assets/images/noise.png);
-    background-repeat: repeat;
-    background-position: 0 0;
-    background-size: auto;
- }
- &__title {
-    margin: -110px 0 70px;
-    box-sizing: border-box;
-    padding: 10px 84px;
-    max-width: 595px;
-    background-color: @black;
-    text-transform: uppercase;
-    font-family: @font2;
-    font-size: 22px;
-    line-height: 30px;
-    letter-spacing: 0.44px;
-    color: @white;
- }
- &__sticky-close {
-    position: sticky;
-    align-self: flex-end;
+    position: fixed;
     top: 0;
-    width: 0;
-    
- }
- &__sticky-btn {
-    position: absolute;
-    right: -70px;
-    top: -100px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    border: none;
-    outline: none;
-    border-radius: 50%;
-    background-color: @black;
-    color: @white;
-    transition: background-color 0.2s;
-    &:hover {
-        @media (hover:hover) {
-            background-color: @red_dark;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 90px 40px 50px;
+    background-color: @gray;
+    overflow-y: auto;
+    z-index: 110;
+    display: none;
+
+    @media @bw768 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media @bw650 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @supports (backdrop-filter: blur(25px)) {
+        & {
+            background-color: @black_40;
+            backdrop-filter: blur(25px);
         }
     }
- }
- &__form {
-    margin: auto;
-    max-width: 870px;
- }
+
+    &__wrapper {
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1210px;
+        margin: auto;
+        background-color: @gray;
+        background-image: url(../assets/images/noise.png);
+        background-position: 0 0;
+        background-size: auto;
+        background-repeat: repeat;
+    }
+
+    &__container {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 0 40px 40px;
+        max-width: 950px;
+
+        @media @bw650 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    &__sticky-close {
+        position: sticky;
+        top: -60px;
+        align-self: flex-end;
+        width: 0;
+        height: 0;
+    }
+
+    &__x-btn {
+        position: absolute;
+        top: -30px;
+        right: -30px;
+
+        @media @bw650 {
+            top:-20px;
+            right: -20px;
+        }
+    }
+
+    &__title {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        margin: -40px 0 70px -85px;
+        padding: 10px 85px;
+        width: 100%;
+        max-width: 595px;
+        min-height: 80px;
+        background-color: @black;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-style: normal;
+        font-family: @font_lora;
+        font-size: 22px;
+        line-height: 30px;
+        color: @white;
+        letter-spacing: 0.02em; // задает промежутки между буквами
+        z-index: 1;
+
+        @media @bw1160{
+            margin-left: -30px;
+            max-width: 465px;
+            padding: 10px 60px 10px 18px;
+        }
+        @media @bw1020 {
+        }
+        @media @bw650 {
+            margin-left: -10px;
+            padding: 10px 20px;
+            margin-bottom: 40px;
+            max-width: 225px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
 }

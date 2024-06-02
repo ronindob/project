@@ -1,0 +1,26 @@
+.scene {
+  &__table {
+    cursor: pointer;
+    color: transparent;
+
+    &--disabled {
+      color: @black_disabled;
+      pointer-events: none;
+    }
+  }
+  &__table-num {
+    color: @black;
+    &--red {
+      color: @red;
+    }
+    &--active {
+      color: @white;
+    }
+  }
+  &__table-group-active {
+    color: @black;
+    &--red {
+      color: @red;
+    }
+  }
+}
